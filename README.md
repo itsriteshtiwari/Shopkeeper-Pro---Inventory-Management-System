@@ -41,3 +41,10 @@ python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install flask flask-cors mysql-connector-python fpdf2
 python app.py
+```
+
+### 3. Frontend Setup
+```
+cd frontend
+npm install
+npm run dev
