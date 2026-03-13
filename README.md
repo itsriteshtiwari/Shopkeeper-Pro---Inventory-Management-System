@@ -50,3 +50,4 @@ npm install
 npm run dev
 ```
 ## UI
+assets/1.png
