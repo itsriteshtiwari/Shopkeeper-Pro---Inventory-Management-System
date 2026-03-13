@@ -50,4 +50,4 @@ npm install
 npm run dev
 ```
 ## UI
-
+![Image alt](https://github.com/itsriteshtiwari/Shopkeeper-Pro---Inventory-Management-System/blob/5ff2f8836aaf363d475db3ce80a2c7df6770409f/assets/1.png)
