@@ -83,12 +83,11 @@ CREATE TABLE IF NOT EXISTS transaction_items (
     qty INT,
     FOREIGN KEY (transaction_id) REFERENCES transaction_master(id) ON DELETE CASCADE
 );
-```
 
 -- Seed the Permanent System Super Admin
 INSERT INTO users (username, email, password, gender, role, createdBy, createdAt) 
 VALUES ('superadmin', 'super@shop.com', 'super123', 'Male', 'super_admin', 'system', CURDATE());
-
+```
 ### 2. Backend Setup
 ```bash
 cd backend
