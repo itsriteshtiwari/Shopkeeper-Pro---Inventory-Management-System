@@ -1,1 +1,53 @@
+CREATE DATABASE shopkeeper_db;
+USE shopkeeper_db;
 
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    gender VARCHAR(20),
+    role ENUM('super_admin', 'normal_admin', 'admin') DEFAULT 'admin',
+    createdBy VARCHAR(50),
+    createdAt DATE
+);
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    category VARCHAR(50),
+    barcode VARCHAR(50) UNIQUE NOT NULL
+);
+
+CREATE TABLE batches (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT,
+    batchId VARCHAR(20),
+    expiry DATE NOT NULL,
+    qty INT NOT NULL,
+    originalQty INT NOT NULL,
+    FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS transaction_master (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sold_by VARCHAR(100),
+    user_role VARCHAR(50),
+    payment_method VARCHAR(50),
+    total_qty INT,
+    sale_date DATE,
+    sale_time TIME
+);
+
+CREATE TABLE IF NOT EXISTS transaction_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    transaction_id INT,
+    product_name VARCHAR(255),
+    barcode VARCHAR(100),
+    qty INT,
+    FOREIGN KEY (transaction_id) REFERENCES transaction_master(id) ON DELETE CASCADE
+);
+
+-- Seed the Permanent System Super Admin
+INSERT INTO users (username, email, password, gender, role, createdBy, createdAt) 
+VALUES ('superadmin', 'super@shop.com', 'super123', 'Male', 'super_admin', 'system', CURDATE());
