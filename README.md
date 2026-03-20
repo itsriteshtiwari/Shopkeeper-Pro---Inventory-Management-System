@@ -52,5 +52,7 @@ npm run dev
 ## UI
 ### For Video 
 [Google Drive for video](https://drive.google.com/drive/folders/1Mr5nr2m4q0BKg0A3AJRRfYgbibapscly?usp=drive_link)
+
+### Images
 ![Image alt](https://github.com/itsriteshtiwari/Shopkeeper-Pro---Inventory-Management-System/blob/5ff2f8836aaf363d475db3ce80a2c7df6770409f/assets/1.png)
 ![Image alt](https://github.com/itsriteshtiwari/Shopkeeper-Pro---Inventory-Management-System/blob/5ff2f8836aaf363d475db3ce80a2c7df6770409f/assets/6.png)
