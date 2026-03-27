@@ -44,7 +44,7 @@ python app.py
 ```
 
 ### 3. Frontend Setup
-```
+```bash
 cd frontend
 npm install
 npm run dev
