@@ -33,6 +33,10 @@ The project utilizes a normalized MySQL architecture:
 
 ### 1. Database Setup
 Create a database named `shopkeeper_db` and run the provided SQL scripts to create tables.
+```
+CREATE DATABASE shopkeeper_db;
+USE shopkeeper_db;
+```
 
 ### 2. Backend Setup
 ```bash
